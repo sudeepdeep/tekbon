@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <title>Home Page</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    body{
+        margin:0;
+        padding:0;
+        font-family: 'Poppins', sans-serif;
+        background: #6D7C81;
+    }
+    .top{
+        height: 100vh;
+        width:100%;
+        background-image : url('images/Web 1920 – 10.png');
+        background-size:cover;
+        background-position: top;
+    }
+    nav{
+      
+        height:150px;
+        margin-left: 65%;
+        text-align:center;
+    }
+    #navbarNavDropdown ul li a:hover{
+        color: #fff;
+    }
+    .dropdown-menu{
+        background: #E0DDDD;
+    }
+    .dropdown-menu .dropdown-item:hover{
+        background: #c0c0c0a6;
+    }
+    .welcome{
+        width:100%;
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .welcome h4{
+        color:#0ab9f8;
+       
+    }
+
+    .middle{
+        height: 100vh;
+        width:100%;
+        background-image : url('images/Web 1920 – 2.png');
+        background-size:cover;
+        background-position: top;
+    }
+    /* #carouselExampleControls{
+        margin-left: 20%;
+        margin-right:20%;
+    }
+    .symbol{
+        width:100%;
+        padding-top: 100px;
+        text-align : center;
+    } */
+
+    .card{
+        transition: transform .2s;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .first .card{
+        width:30%;
+        height: 50%;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 20px 30px 20px;
+       
+    }
+    .second .card{
+        width: 27%;
+        height: 50%;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 20px 30px 20px; 
+    }
+    .card p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .card a{
+        text-decoration:none;
+        color:black;
+    }
+
+
+
+
+
+    .maintext{
+        height: 50vh;
+        text-align: center;
+        color: white;
+        margin-left:40%;
+        transform: translate(-5%, 20%);
+        padding-left: 30px;
+        padding-right:30px;
+       
+    }
+
+    .maintext p{
+        animation: fadeout 1.5s ease-in;
+        font-size: 18px;
+    }
+    
+    .maintext h1{
+        color:black;    
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .0em solid red; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    padding-bottom: 20px; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red; }
+    }
+
+    @keyframes fadeout {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+
+    .bottom{
+        height: 100vh;
+        padding-top: 40px;
+        background:#DF9926;
+        width: 100%;
+    }
+    .vision{
+        display: flex;
+        height: 25vh;
+        text-align: center;
+        padding-left: 5%;
+    }
+    
+    .visiontext{
+        padding-top:3%;
+        padding-left: 5%;
+        padding-right: 35%;
+    }
+    .mission{
+        display: flex;
+        height: 25vh;
+        text-align: center;
+        padding-right: 5%;
+    }
+
+    .missiontext{
+        padding-top:3%;
+        padding-left: 35%;
+        padding-right: 5%;
+    }
+    .quotation{
+        text-align:center;
+        padding-top: 100px;
+        justify-content: center;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+    .footer{
+        height: 30vh;
+    }
+    table{
+        margin-top: 4%;
+       
+    }
+    table h5 a{
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    table h5 a:hover{
+        color: white;
+    }
+</style>
+<body>
+    <div class = "main">
+        <div class="top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Managed Services</a></li>
+                        <li><a class="dropdown-item" href="#">Oracle ERP Solutions</a></li>
+                        <li><a class="dropdown-item" href="#">E-Commerce</a></li>
+                        <li><a class="dropdown-item" href="#">Mobile Application Development</a></li>
+                        <li><a class="dropdown-item" href="#">Custom Application Development</a></li>
+                        <li><a class="dropdown-item" href="#">Web Development</a></li>
+                        <li><a class="dropdown-item" href="#">Staffing</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Careers</a>
+                    </li>
+                   
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="maintext">
+           <h1>Welcome to TEKBON</h1>
+            <p>Tekbon as an IT company specialized and offering wide range of services such as IT Consulting, Remote Support Services, E-Learning, Oracle E-Business Suite Implementation and Upgrades and Professional Services. We also help clients develop and improve their Web Solutions, E-Commerce Solutions, Mobile Applications, and Custom Application Development.</p>
+            <p>We are committed in assisting our customers in streamlining their business processes by using best of the technology and business practices. We help our client’s successfully respond and capitalize on their opportunities by providing software solutions and professional services when they are needed</p>
+            <p>Tekbon gained years of experience to effectively leverage on-site and offshore project execution model which allow us in drastic reduction of costs and offers an excellent value for money proposition to our clients. Tekbon process includes a focus on modularity of design, component technology, re-usability, scalability, maintainability and supportability. We have earned a reputation in the industry for delivering every project on time and budget.</p>
+        </div>
+
+
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/app dec1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/mobile dev1.jpg" class="d-block w-100"  alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/remote.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/oracle ERP1.png" class="d-block w-100"  alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+</div>
+<div class = "middle">
+
+    <div class = "first d-flex">
+        <div class="card mx-5 my-5">
+            <a href = "">
+            <div class = "oracle">
+                <div class="image"><img src = "images/Web 1920 – 5.png" width = "40%" height = "40%"></div>
+                <div class="text"><p>Tekbon helped lot of clients in Oracle E-business suite implementation, upgrades and maintenance. Our Oracle applications experts utilize years of real-world experience and unequaled knowledge to ensure that your implementation will be a success.</p></div>
+            </div></a>
+        </div>
+
+
+        <div class="card mx-5 my-5">
+            <a href = "">
+            <div class = "mobile">
+                <div class="image"><img src = "images/Web 1920 – 6.png" width = "40%" height = "40%"></div>
+                <div class="text"><p>Tekbon provides end-to-end mobile application development starting from initial business case analysis through post-implementation application support. By using the best technologies and practices, we guarantee high quality custom builds and deliveries.</p></div>
+            </div></a>
+        </div>
+
+
+        <div class="card mx-5 my-5">
+            <a href = "">
+            <div class = "ecommerce">
+                <div class="image"><img src = "images/Web 1920 – 7.png" width = "40%" height = "40%"></div>
+                <div class="text"><p>Tekbon helps client build solutions that increase client revenue through an effective e-Commerce platform. We build application using Magento e-Commence platform that is robust, used by 240000+ companies, supports backend system integration and reports</p></div>
+            </div></a>
+        </div>
+
+    </div>
+    <div class = "second d-flex">
+        
+        <div class="card  mx-5 my-5">
+            <a href = "">
+            <div class = "application">
+                <div class="image"><img src = "images/Web 1920 – 9.png" width = "40%" height = "40%"></div>
+                <div class="text"><p>Tekbon helps client build IT solutions that support business process transitions. We build applications that are robust, ease to use, portable and scalable. We help clients develop Applications using MS Technologies, Java/J2EE and PHP 5+.</p></div>
+            </div></a>
+        </div>
+
+
+
+        <div class="card   mx-5 my-5">
+            <a href = "">
+            <div class = "service">
+                <div class="image"><img src = "images/Web 1920 – 8.png" width = "40%" height = "40%"></div>
+                <div class="text"><p>Tekbon offer the whole package companies need to support and monitor their systems and enable them to focus on initiatives that help them augment business growth. We provide Remote DBA Services, Maintenance, Monitoring, Reporting and Alerting.</p></div>
+            </div></a>
+        </div>
+
+</div>
+        
+        <div class="bottom">
+
+        <div class = "vision">
+            <div class = "visionlogo"><img src = "images/Web 1920 – 11.png"></div>
+            <div class = "visiontext"><h4>We would like to see Tekbon as a leader in delivering IT solutions and staffing by developing an effective client base and good relationship with our customers.</h4></div>
+        </div>
+
+
+        <div class = "mission">
+            <div class = "missiontext"><h4>We provide full range of IT development and consulting services by adhering to core values of integrity and team work. We strive to make technology integrate seamlessly with your business so your business can grow.</h4></div>
+            <div class = "missionlogo"><img src = "images/Web 1920 – 12.png"></div>
+        </div>
+        <div class = "quotation">
+            <h2><svg width="10" height="10"><img class = "mx-2" src = "images/quote.png" width = "30px" height = "30px"/></svg>   We streamline business processes and deliver innovative technology solutions that help improve client business.<svg width="10" height="10"><img src = "images/quote.png" width = "30px" height = "30px"/></svg></h2>
+        </div>
+        </div>
+        <div class="footer">
+            <div class = "links">
+                <table width = "100%" align = "center">
+                  <tr align = "left">
+                        <td>
+                            <h5>Company Profile</h5>
+                        </td>
+                    <td>
+                        <h5>Application Development</h5>
+                    </td>
+                    <td><h5>Managed Services</h5></td>
+                    <td><h5>Staffing</h5></td>
+                </tr>
+                <tr align = "left">
+                    <td><h5><a href = "">Home</a></h5></td>
+                    <td><h5><a href = "">E-Commerce</a></h5></td>
+                    <td><h5><a href = "">Remote DBA Services</a></h5></td>
+                    <td><h5><a href = "">Staffing Methodology</a></h5></td>
+                </tr>
+
+                <tr align = "left">
+                    <td><h5><a href = "">About Us</a></h5></td>
+                    <td><h5><a href = "">Mobile Application Development</a></h5></td>
+                    <td><h5><a href = "">Application Implementation and Support</a></h5></td>
+                    <td><h5><a href = "">Carrers</a></h5></td>
+                </tr>
+
+                <tr align = "left">
+                    <td><h5><a href = "">Contact Us</a></h5></td>
+                    <td><h5><a href = "">Custom Application Development</a></h5></td>
+                    <td><h5><a href = "">Network Administration</a></h5></td>
+                    <td><h5></h5></td>
+                </tr>
+
+                <tr align = "left">
+                    <td><h5></h5></td>
+                    <td><h5><a href = "">Web Development</a></h5></td>
+                    <td><h5></h5></td>
+                    <td><h5></h5></td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src = "sandbox.js"></script>
+</body>
+</html>
